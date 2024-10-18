@@ -23,7 +23,6 @@ public class AdsBanner : MonoBehaviour
 
         // Set the banner position:
         Advertisement.Banner.SetPosition(_bannerPosition);
-
         LoadBanner();
     }
 
@@ -39,14 +38,11 @@ public class AdsBanner : MonoBehaviour
 
         // Load the Ad Unit with banner content:
         Advertisement.Banner.Load(_adUnitId, options);
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
     }
 
     void OnBannerLoaded()
     {
         Debug.Log("Banner loaded");
-
-        ShowBannerAd();
 
         //// Configure the Show Banner button to call the ShowBannerAd() method when clicked:
         //_showBannerButton.onClick.AddListener(ShowBannerAd);
@@ -56,6 +52,8 @@ public class AdsBanner : MonoBehaviour
         //// Enable both buttons:
         //_showBannerButton.interactable = true;
         //_hideBannerButton.interactable = true;
+
+        ShowBannerAd();
     }
 
     // Implement code to execute when the load errorCallback event triggers:
